@@ -8,7 +8,7 @@ CERT_IMAGE="debian:latest"
 cd `dirname $0`
 
 # Update the cert image.
-docker pull $CERT_IMAGE
+# docker pull $CERT_IMAGE
 
 # Fetch the latest certificates.
 ID=$(docker run -d $CERT_IMAGE bash -c "apt-get update && apt-get install -y --no-install-recommends ca-certificates")
